@@ -28,7 +28,7 @@ export function NavBar({
             style={{ WebkitTapHighlightColor: 'transparent' }}
             aria-label="Toggle sidebar"
           >
-            <SidebarToggleIcon size={22} className="md:hidden" />
+            <SidebarToggleIcon size={22} />
           </button>
         )}
         <Link href="/" className="flex items-center" target="_blank">

@@ -33,7 +33,7 @@ export function FragmentPreview({
     const svgCode = typeof fragment?.code === 'string' 
       ? fragment.code 
       : Array.isArray(fragment?.code) && fragment.code.length > 0
-        ? fragment.code[0].code
+        ? fragment.code[0]?.code ?? ''
         : ''
     
     return (
@@ -65,7 +65,7 @@ export function FragmentPreview({
     const code = typeof fragment?.code === 'string' 
       ? fragment.code 
       : Array.isArray(fragment?.code) && fragment.code.length > 0
-        ? fragment.code[0].code
+        ? fragment.code[0]?.code ?? ''
         : ''
     
     if (!code) {
@@ -100,7 +100,6 @@ export function FragmentPreview({
             autoReload: true,
             recompileDelay: 0,
             initMode: 'immediate',
-            showLineNumbers: false,
           }}
           customSetup={{
             dependencies: {
