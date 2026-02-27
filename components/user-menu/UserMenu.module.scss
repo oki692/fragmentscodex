@@ -1,0 +1,20 @@
+.wrapper {
+  border: 1px solid transparent;
+  transition: all 150ms ease-in-out;
+  outline: none !important;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &:focus, &:focus-visible, &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}

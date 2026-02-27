@@ -1,0 +1,39 @@
+{
+  "models": [
+    {
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "provider": "Nvidia",
+      "providerId": "nvidia",
+      "name": "Qwen 3 Next 80B",
+      "multiModal": false
+    },
+    {
+      "id": "deepseek-ai/deepseek-v3.1-terminus",
+      "provider": "Nvidia",
+      "providerId": "nvidia",
+      "name": "DeepSeek V3.1",
+      "multiModal": false
+    },
+    {
+      "id": "z-ai/glm4.7",
+      "provider": "Nvidia",
+      "providerId": "nvidia",
+      "name": "GLM 4.7",
+      "multiModal": false
+    },
+    {
+      "id": "moonshotai/kimi-k2-instruct-0905",
+      "provider": "Nvidia",
+      "providerId": "nvidia",
+      "name": "Kimi K2 Instruct",
+      "multiModal": false
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "provider": "Nvidia",
+      "providerId": "nvidia",
+      "name": "GPT OSS 120B",
+      "multiModal": false
+    }
+  ]
+}

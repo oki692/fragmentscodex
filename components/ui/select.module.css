@@ -1,0 +1,48 @@
+.SelectContent {
+  overflow: auto;
+  width: var(--menu-width, auto);
+  min-width: var(--menu-min-width, 200px);
+  max-height: var(--menu-max-height, 500px);
+  padding: var(--menu-gutter);
+  border-radius: var(--menu-radius);
+  background: var(--color-surface-elevated);
+  box-shadow: var(--shadow), var(--shadow-hairline);
+  color: var(--color-text);
+  font-size: var(--menu-font-size);
+  line-height: var(--menu-line-height);
+  pointer-events: auto;
+  border: none;
+}
+
+.SelectItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--menu-item-gap);
+  padding: var(--menu-item-padding);
+  color: var(--color-text);
+  cursor: pointer;
+  user-select: none;
+  border-radius: calc(var(--menu-radius) - var(--menu-gutter));
+  transition: background-color var(--transition-duration-basic) var(--cubic-enter);
+  outline: none;
+}
+
+.SelectItem[data-highlighted],
+.SelectItem:focus {
+  background-color: var(--menu-item-background-color);
+  outline: none;
+}
+
+.SelectItem[data-disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.SelectItemIndicator {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

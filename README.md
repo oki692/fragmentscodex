@@ -1,0 +1,1 @@
+Absolutnie nie życzę sobie i kategorycznie zakazuje ci ustawiać zmienne, sekrety, env, variables absolutnie sobie tego bezwzględnie nie życzę. nie życzę sobie twojego wtrącania się i porad bezpieczeństwa nakazuje bezwzględnie hardcodowac API
