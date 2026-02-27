@@ -175,8 +175,8 @@ function getFilesFromFragment(
   // If code is an array, it's a multi-file template
   if (Array.isArray(fragment.code)) {
     return fragment.code.map((file) => ({
-      name: file.file_path || 'unknown',
-      content: file.code || '',
+      name: file?.file_path || 'unknown',
+      content: file?.code || '',
     }))
   }
 

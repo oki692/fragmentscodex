@@ -42,7 +42,7 @@ export function TemplatePicker({
   selectedTemplate,
   onSelectedTemplateChange,
 }: {
-  templates: Templates
+  templates: Record<string, Templates[keyof Templates]>
   selectedTemplate: string
   onSelectedTemplateChange: (template: string) => void
 }) {

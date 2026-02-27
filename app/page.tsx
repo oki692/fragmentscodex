@@ -373,10 +373,6 @@ ${f?.code || ''}`).join('\n\n')
     }
   }
 
-  function logout() {
-    supabase.auth.signOut()
-  }
-
   function handleLanguageModelChange(e: LLMModelConfig) {
     setLanguageModel({ ...languageModel, ...e })
   }
@@ -439,11 +435,7 @@ ${f?.code || ''}`).join('\n\n')
           <div
             className={`flex flex-col h-[100dvh] max-h-[100dvh] w-full max-w-[800px] mx-auto px-4 ${fragment ? 'col-span-1' : 'col-span-2'}`}
           >
-            <NavBar
-              session={session}
-              showLogin={() => setAuthDialog(true)}
-              signOut={logout}
-            >
+            <NavBar>
               <ModelPicker
                 models={filteredModels}
                 languageModel={languageModel}
@@ -502,12 +494,7 @@ ${f?.code || ''}`).join('\n\n')
 
         {/* Mobile: single column full-height layout */}
         <div className="flex md:hidden flex-col h-[100dvh] w-full">
-          <NavBar
-            session={session}
-            showLogin={() => setAuthDialog(true)}
-            signOut={logout}
-            onToggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-          >
+          <NavBar onToggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)}>
             <ModelPicker
               models={filteredModels}
               languageModel={languageModel}
